@@ -8,8 +8,8 @@ class Recipe
   private
 
   def print_data
-    RecipeData::DATA.each do |name|
-      puts name
+    RecipeData::DATA.each do |recipe|
+      puts "#{recipe[:id]}: #{recipe[:name]}"
     end
   end
 end

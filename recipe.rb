@@ -19,4 +19,8 @@ class Recipe
   end
 end
 
-Recipe.new()
+if ARGV[0]
+  Recipe.new(ARGV[0].to_i)
+else
+  Recipe.new()
+end

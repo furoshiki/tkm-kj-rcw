@@ -23,7 +23,7 @@ class RecipeReader
   end
 end
 
-# 引数を元にレシピへの操作を決定する
+# コマンドライン引数を元にレシピ情報への操作を決定する
 if ARGV[0]
   RecipeReader.print(ARGV[0].to_i)
 else

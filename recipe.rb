@@ -1,5 +1,6 @@
 require './recipe_data'
 
+# レシピの管理、出力を行えるようにするクラス
 class Recipe
   def initialize(id=nil)
     if id
@@ -13,12 +14,12 @@ class Recipe
   end
 
   private
-
   def print_data(recipe)
     puts "#{recipe[:id]}: #{recipe[:name]} : #{recipe[:discription]}"
   end
 end
 
+# 引数を元にレシピへの操作を決定する
 if ARGV[0]
   Recipe.new(ARGV[0].to_i)
 else

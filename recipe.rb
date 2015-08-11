@@ -1,15 +1,17 @@
 require './recipe_data'
 
 class Recipe
-  def initialize(name)
-    print_data(name)
+  def initialize
+    print_data
   end
 
   private
 
-  def print_data(name)
-    puts RecipeData::DATA.find {|d| name == d }
+  def print_data
+    RecipeData::DATA.each do |name|
+      puts name
+    end
   end
 end
 
-Recipe.new('オムライス')
+Recipe.new
